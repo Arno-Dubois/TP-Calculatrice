@@ -34,7 +34,7 @@ int main() {
             secondNumber = userNumber();
         }
 
-        if(isFirstOperation == 1) isFirstOperation = 0;
+        isFirstOperation = 0;
         switch (operation) {
             case '+':
                 firstNumber += secondNumber;
@@ -63,8 +63,7 @@ int main() {
             default:
                 printf("Opératon invalide\n");
         }
-
-        printf(" = %.2lf\n", firstNumber);
+        if(isFirstOperation == 0) printf(" = %.2lf\n", firstNumber);
     }
 
     return 1;
